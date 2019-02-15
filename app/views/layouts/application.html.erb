@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>scheduler</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", media: "all" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="container">
+    <noscript>
+        You need to enable JavaScript to run this app.
+    </noscript>
+
+    <div class="row">
+        <nav class="col-md-7 offset-md-3">
+            <ul class="nav justify-content-between">
+                <li class="nav-item">
+                    <%= link_to "coaching scheduler", root_path, class: "nav-link" %>
+                </li>
+                <li class="nav-item">
+                    <%= link_to "my appointments", appointments_path, class: "nav-link" %>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <%= yield %>
+
+    <%= javascript_pack_tag "application" %>
+</body>
+
+</html>
